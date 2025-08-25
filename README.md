@@ -6,13 +6,14 @@ Pipeline mengambil data historis saham dari **Yahoo Finance** menggunakan librar
 melakukan transformasi data dengan `pandas`, lalu menyimpannya ke dalam **PostgreSQL** untuk kebutuhan analisis lebih lanjut.
 
 ## 🛠️ Tech Stack
-- Python 3.x
-- Pandas
-- yfinance
-- psycopg2
-- PostgreSQL
+- Python 3.x  
+- Pandas  
+- yfinance  
+- psycopg2  
+- PostgreSQL  
 
 ## 📂 Struktur Project
+
 finance-etl-project/
 │── etl/
 │ ├── extract/
