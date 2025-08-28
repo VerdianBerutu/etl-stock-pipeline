@@ -2,7 +2,7 @@ import logging
 import datetime
 from etl.extract.extract_api import extract_from_yahoo
 from etl.transform.transform_data import transform_stock_data
-from etl.load.load_db import save_to_db
+from etl.load.load_db import save_to_db   # ✅ ini sudah sesuai
 
 # 🔹 Config logging
 logging.basicConfig(
@@ -36,17 +36,17 @@ def run_etl():
             logging.info(f"✅ Extract {ticker} berhasil, total {len(df)} baris")
 
             # Transform
-            df_transformed = transform_stock_data(df)
+            df_transformed = transform_stock_data(df, ticker)  # ✅ ticker ikut masuk
             logging.info(f"✅ Transform {ticker} berhasil")
 
             # Load
-            save_to_db(df_transformed, f"{ticker}_stock", db_config)
-            logging.info(f"✅ Load {ticker} ke tabel {ticker}_stock berhasil")
+            save_to_db(df_transformed, db_config, "stock_prices")  # ✅ simpan ke 1 tabel
+            logging.info(f"✅ Load {ticker} ke tabel stock_prices berhasil")
 
         except Exception as e:
             logging.error(f"❌ Error memproses {ticker}: {e}")
 
-    logging.info("🎉 ETL pipeline selesai untuk semua ticker")
+    logging.info(" ETL pipeline selesai untuk semua ticker")
 
 if __name__ == "__main__":
     run_etl()

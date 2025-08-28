@@ -1,0 +1,27 @@
+{
+  "name": "Corporate Blue Dashboard",
+  "dataColors": ["#003366", "#5A5A5A", "#009933", "#CC0000", "#FF9900"],
+  "background": "#F4F6F9",
+  "foreground": "#000000",
+  "tableAccent": "#003366",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "color": { "solid": { "color": "#003366" } },
+            "fontSize": 18,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "labels": [
+          {
+            "color": { "solid": { "color": "#5A5A5A" } },
+            "fontSize": 12,
+            "fontFamily": "Segoe UI"
+          }
+        ]
+      }
+    }
+  }
+}
