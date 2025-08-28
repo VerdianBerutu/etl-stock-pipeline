@@ -18,6 +18,8 @@ Thumbs.db
 # Environment variables / secrets
 .env
 config.yaml
+
+#DB Config
 db_config.py
 
 
